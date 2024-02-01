@@ -1,18 +1,19 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="flex h-screen text-gray-100">
       <div className="space-y-2 overflow-y-scroll bg-gray-900 p-3 no-scrollbar">
-        <div className="hover:bg-brand flex h-12 w-12 items-center justify-center rounded-3xl bg-gray-700 text-gray-100 transition-all duration-200 hover:rounded-2xl hover:text-white">
-          <DiscordIcon props={{}} className="w- h-5" />
-        </div>
-        {/* {[...Array(40)].map((_, i) => (
-          <div
-            className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-gray-800"
-            key={i}
-          >
-            {i}
-          </div>
-        ))} */}
+        <Link legacyBehavior href="/">
+          <a className="flex h-12 w-12 items-center justify-center rounded-3xl bg-gray-700 text-gray-100 transition-all duration-200 hover:rounded-2xl hover:bg-brand hover:text-white">
+            <DiscordIcon props={{}} className="w- h-5" />
+          </a>
+        </Link>
+        <Link legacyBehavior href="./serverOne">
+          <a className="flex h-12 w-12 items-center justify-center rounded-3xl bg-gray-700 text-gray-100 transition-all duration-200 hover:rounded-2xl hover:bg-brand hover:text-white">
+            S1
+          </a>
+        </Link>
       </div>
 
       <div className="flex w-60 flex-col bg-gray-800">
